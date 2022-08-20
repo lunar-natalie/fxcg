@@ -22,14 +22,14 @@ include $(FXCGSDK)/toolchain/prizm_rules
 # Build configuration
 # ==============================================================================
 
-OUTPUT_NAME	:= $(notdir $(CURDIR))
+OUTPUT_NAME	:= prizmatron
 BUILD_DIR	:= build
 SOURCE_DIRS	:= src
 DATA_DIRS	:= data
 INCLUDE_DIRS	:=
 
 # Options for add-in generation
-MKG3AFLAGS	:= -n basic:fxcg \
+MKG3AFLAGS	:= -n basic:Prizmatron \
 			-i uns:../res/unselected.bmp -i sel:../res/selected.bmp
 
 # ==============================================================================

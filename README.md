@@ -1,10 +1,10 @@
-# fxcg
+# Prizmatron: 2084
 
-A program for the Casio FX-CG50 calculator.
+A multidirectional shooter for the Casio FX-CG50 calculator.
 
 ## Table of contents
 
-* [fxcg](#fxcg)
+* [Prizmatron: 2084](#prizmatron-2084)
     * [Table of contents](#table-of-contents)
     * [Documentation](#documentation)
     * [Usage](#usage)
@@ -61,13 +61,13 @@ Menu.
 ```Shell
 make
 ```
-* Output: `fxcg.g3a`
+* Output: `prizmatron.g3a`
 
 ### VS Code
 
 * Run Build Task (`Build add-in`)
     * Default keybind: `shift + ctrl/cmd + b`
-    * Output: `fxcg.g3a`
+    * Output: `prizmatron.g3a`
 
 ## Installation
 

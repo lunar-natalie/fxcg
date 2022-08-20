@@ -1,7 +1,8 @@
 /**
  * @file main.c
  * @author Natalie Wiggins (islifepeachy@outlook.com)
- * @brief Entry point to a program for the Casio FX-CG50 calculator.
+ * @brief Entry point to Prizmatron: 2084, a multidirectional shooter for the
+ * Casio FX-CG50 calculator.
  * @version 0.1
  * @date 2022-08-19
  *
