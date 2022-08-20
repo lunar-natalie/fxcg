@@ -15,7 +15,7 @@ A multidirectional shooter for the Casio FX-CG50 calculator.
         * [VS Code](#vs-code)
     * [Installation](#installation)
         * [Additional requirements](#additional-requirements)
-        * [Configuration](#configuration-1)
+        * [Setup](#setup)
         * [Install](#install)
             * [Standalone](#standalone-1)
             * [VS Code](#vs-code-1)
@@ -46,7 +46,7 @@ Menu.
 * [`mkg3a`](https://github.com/tari/mkg3a)
 * `make`
 * `sh3eb-elf-binutils`
-* `sh3eb-elf-gcc`
+* `sh3eb-elf-gcc` with C17 support
 
 ### Configuration
 
@@ -78,7 +78,7 @@ make
 * `sudo`
 * `umount`
 
-### Configuration
+### Setup
 
 * Connect the calculator to your computer via USB
 * Go to the 'Link' program if it hasn't automatically started
@@ -91,6 +91,8 @@ make
     ```Makefile
     CGDEV=<PATH_TO_DEVICE>
     ```
+* Follow the steps to install or uninstall the add-in. When prompted by the
+  calculator, disconnect the calculator from your computer
 
 ### Install
 
