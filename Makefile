@@ -39,7 +39,7 @@ MKG3AFLAGS	:= -n basic:Prizmatron \
 # -flto in CFLAGS and LDFLAGS enables link-time optimization (LTO). This usually
 # allows the compiler to generate smaller and/or faster code, however may expose
 # bugs in the source code that wouldn't cause any trouble without LTO enabled.
-CFLAGS		= -Os -Wall $(MACHDEP) $(INCLUDE) -ffunction-sections \
+CFLAGS		= -std=c17 -Os -Wall $(MACHDEP) $(INCLUDE) -ffunction-sections \
 			-fdata-sections -flto
 
 LDFLAGS		= $(MACHDEP) -T$(FXCGSDK)/toolchain/prizm.x -Wl,-static \
