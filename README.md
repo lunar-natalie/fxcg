@@ -35,8 +35,8 @@ angle brackets
 
 ## Usage
 
-After installing the add-in, the program should appear in the calculator's main
-menu.
+After installing the add-in, the program should appear in the calculator's Main
+Menu.
 
 ## Building
 
