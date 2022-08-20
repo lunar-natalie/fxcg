@@ -120,7 +120,7 @@ endif
 			sleep 1; \
 		done; \
 	fi
-	findmnt --source "$(CGDEV)" > /dev/null && (umount "$(CGDEV)" || exit $?) || true && \
+	findmnt --source "$(CGDEV)" > /dev/null && (umount "$(CGDEV)" || exit 1) || true && \
 		tmp=$$(mktemp --directory) && \
 		(mount "$(CGDEV)" "$$tmp" || (rmdir "$$tmp"; exit 1)) && \
 		(cp "$(OUTPUT).g3a" "$$tmp" || (umount "$(CGDEV)"; exit 1)) && \
