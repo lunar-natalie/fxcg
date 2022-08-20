@@ -82,7 +82,7 @@ make
 
 * Connect the calculator to your computer via USB
 * Power on the calculator
-* Go to the 'Link' add-in if it hasn't automatically started
+* Go to the 'Link' program if it hasn't automatically started
     * Select the Connection Mode 'USB Flash'
     * Select 'RECV'
 * Note the path to the calculator's flash storage partition on your computer in
