@@ -1,0 +1,43 @@
+{
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "newLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "newLine",
+    "C_Cpp.vcFormat.newLine.scopeBracesOnSeparateLines": true,
+    "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
+    "doxdocgen.file.copyrightTag": [
+        "@copyright Copyright (c) {year} Natalie Wiggins.",
+        "This program is free software: you can redistribute it and/or modify",
+        "it under the terms of the GNU General Public License as published by",
+        "the Free Software Foundation, either version 3 of the License, or",
+        "(at your option) any later version.",
+        "",
+        "This program is distributed in the hope that it will be useful,",
+        "but WITHOUT ANY WARRANTY; without even the implied warranty of",
+        "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the",
+        "GNU General Public License for more details.",
+        "",
+        "You should have received a copy of the GNU General Public License",
+        "along with this program. If not, see <https://www.gnu.org/licenses/>."
+    ],
+    "doxdocgen.c.setterText": "Sets the {name} object.",
+    "doxdocgen.c.factoryMethodText": "Creates a {name} object.",
+    "doxdocgen.c.getterText": "Gets the {name} object.",
+    "doxdocgen.generic.returnTemplate": "@return ",
+    "[c]": {
+        "editor.tabSize": 8,
+   		"editor.insertSpaces": false
+    },
+    "[makefile]": {
+        "editor.tabSize": 8,
+   		"editor.insertSpaces": false
+    },
+    "files.associations": {
+        "display.h": "c",
+        "keyboard.h": "c"
+    }
+}

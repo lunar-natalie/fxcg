@@ -1,0 +1,4 @@
+.env.mk
+/build
+/fxcg.bin
+/fxcg.g3a

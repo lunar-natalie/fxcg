@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build add-in",
+            "type": "shell",
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Install add-in",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "make",
+                "install"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Uninstall add-in",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "make",
+                "uninstall"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
