@@ -81,7 +81,6 @@ make
 ### Configuration
 
 * Connect the calculator to your computer via USB
-* Power on the calculator
 * Go to the 'Link' program if it hasn't automatically started
     * Select the Connection Mode 'USB Flash'
     * Select 'RECV'
