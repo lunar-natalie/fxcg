@@ -91,8 +91,11 @@ make
     ```Makefile
     CGDEV=<PATH_TO_DEVICE>
     ```
-* Follow the steps to install or uninstall the add-in. When prompted by the
-  calculator, disconnect the calculator from your computer
+* Disconnect the calculator from your computer
+* Follow the steps to install or uninstall the add-in, re-connecting the
+  calculator **after** starting the steps in order to prevent the Link from
+  timing out.
+  When prompted by the calculator, disconnect the calculator from your computer
 
 ### Install
 
