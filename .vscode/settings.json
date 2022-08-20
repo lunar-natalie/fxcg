@@ -9,6 +9,19 @@
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "newLine",
     "C_Cpp.vcFormat.newLine.scopeBracesOnSeparateLines": true,
     "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
+    "doxdocgen.c.triggerSequence": "///",
+    "doxdocgen.c.commentPrefix": "/// ",
+    "doxdocgen.c.firstLine": "",
+    "doxdocgen.c.lastLine": "",
+    "doxdocgen.file.fileOrder": [
+        "file",
+        "author",
+        "brief",
+        "version",
+        "date",
+        "empty",
+        "copyright"
+    ],
     "doxdocgen.file.copyrightTag": [
         "@copyright Copyright (c) {year} Natalie Wiggins.",
         "This program is free software: you can redistribute it and/or modify",
