@@ -68,13 +68,13 @@ Menu.
 ```Shell
 make
 ```
-* Output: `prizmatron.g3a`
+* Output: `Prizmatron.g3a`
 
 ### VS Code
 
 * Run Build Task (`Build add-in`)
     * Default keybind: `shift + ctrl/cmd + b`
-    * Output: `prizmatron.g3a`
+    * Output: `Prizmatron.g3a`
 
 ## Installation
 
@@ -101,9 +101,8 @@ make
     ```
 * Disconnect the calculator from your computer
 * Follow the steps to install or uninstall the add-in, re-connecting the
-  calculator **after** starting the steps in order to prevent the Link from
-  timing out.
-  When prompted by the calculator, disconnect the calculator from your computer
+  calculator *after* following the steps in order to prevent the Link from
+  timing out. When prompted by the calculator, disconnect it from your computer
 
 ### Install
 
