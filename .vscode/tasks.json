@@ -21,22 +21,22 @@
             "problemMatcher": []
         },
         {
-            "label": "Uninstall add-in",
-            "type": "shell",
-            "command": "sudo",
-            "args": [
-                "make",
-                "uninstall"
-            ],
-            "problemMatcher": []
-        },
-        {
             "label": "Watch: Install add-in",
             "type": "shell",
             "command": "sudo",
             "args": [
                 "make",
                 "install_watch"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Uninstall add-in",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "make",
+                "uninstall"
             ],
             "problemMatcher": []
         },
