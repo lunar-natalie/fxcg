@@ -87,7 +87,7 @@ export OFILES	:= $(addsuffix .o,$(BINFILES)) $(CFILES:.c=.o) \
 			$(CXXFILES:.cc=.o) $(sFILES:.s=.o) $(SFILES:.S=.o)
 
 # Include path flags
-export INCLUDE	:= $(foreach dir,$(INCLUDE_DIRS), -iquote $(CURDIR)/$(dir)) \
+export INCLUDE	:= $(foreach dir,$(INCLUDE_DIRS),-iquote $(CURDIR)/$(dir)) \
 			$(foreach dir,$(LIB_DIRS),-I$(dir)/include) \
 			-I$(CURDIR)/$(BUILD_DIR) -I$(LIBFXCG_INC)
 
