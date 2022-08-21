@@ -95,7 +95,7 @@ make
 * Add the following to `.env.mk`:
 
     ```Makefile
-    CGDEV=<PATH_TO_DEVICE>
+    PRIZMDEV=<PATH_TO_DEVICE>
     ```
 * Disconnect the calculator from your computer
 * Follow the steps to install or uninstall the add-in, re-connecting the

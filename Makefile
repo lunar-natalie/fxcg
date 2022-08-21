@@ -5,7 +5,7 @@
 -include .env.mk
 
 export FXCGSDK
-export CGDEV
+export PRIZMDEV
 
 ifeq ($(strip $(FXCGSDK)),)
 $(error FXCGSDK is not set in your environment. \
@@ -108,23 +108,23 @@ $(BUILD_DIR):
 	@mkdir $@
 
 install: $(OUTPUT).g3a
-ifeq ($(strip $(CGDEV)),)
-$(error CGDEV is not set in your environment. \
-	Run `export CGDEV=<PATH_TO_DEVICE>` or add `CGDEV=<PATH_TO_DEVICE>` to '.env.mk')
+ifeq ($(strip $(PRIZMDEV)),)
+$(error PRIZMDEV is not set in your environment. \
+	Run `export PRIZMDEV=<PATH_TO_DEVICE>` or add `PRIZMDEV=<PATH_TO_DEVICE>` to '.env.mk')
 endif
-	@if [ ! -e "$(CGDEV)" ]; \
+	@if [ ! -e "$(PRIZMDEV)" ]; \
 	then \
-		echo "Waiting for device '$(CGDEV)'..."; \
-		while [ ! -e "$(CGDEV)" ]; \
+		echo "Waiting for device '$(PRIZMDEV)'..."; \
+		while [ ! -e "$(PRIZMDEV)" ]; \
 		do \
 			sleep 1; \
 		done; \
 	fi
-	findmnt --source "$(CGDEV)" > /dev/null && (umount "$(CGDEV)" || exit 1) || true && \
+	findmnt --source "$(PRIZMDEV)" > /dev/null && (umount "$(PRIZMDEV)" || exit 1) || true && \
 		tmp=$$(mktemp --directory) && \
-		(mount "$(CGDEV)" "$$tmp" || (rmdir "$$tmp"; exit 1)) && \
-		(cp "$(OUTPUT).g3a" "$$tmp" || (umount "$(CGDEV)"; exit 1)) && \
-		umount "$(CGDEV)"; \
+		(mount "$(PRIZMDEV)" "$$tmp" || (rmdir "$$tmp"; exit 1)) && \
+		(cp "$(OUTPUT).g3a" "$$tmp" || (umount "$(PRIZMDEV)"; exit 1)) && \
+		umount "$(PRIZMDEV)"; \
 		rmdir "$$tmp"
 
 install_watch:
@@ -141,23 +141,23 @@ install_watch:
 		done;
 
 uninstall:
-ifeq ($(strip $(CGDEV)),)
-$(error CGDEV is not set in your environment. \
-	Run `export CGDEV=<PATH_TO_DEVICE>` or add `CGDEV=<PATH_TO_DEVICE>` to '.env.mk')
+ifeq ($(strip $(PRIZMDEV)),)
+$(error PRIZMDEV is not set in your environment. \
+	Run `export PRIZMDEV=<PATH_TO_DEVICE>` or add `PRIZMDEV=<PATH_TO_DEVICE>` to '.env.mk')
 endif
-	@if [ ! -e "$(CGDEV)" ]; \
+	@if [ ! -e "$(PRIZMDEV)" ]; \
 	then \
-		echo "Waiting for device '$(CGDEV)'..."; \
-		while [ ! -e "$(CGDEV)" ]; \
+		echo "Waiting for device '$(PRIZMDEV)'..."; \
+		while [ ! -e "$(PRIZMDEV)" ]; \
 		do \
 			sleep 1; \
 		done; \
 	fi
-	findmnt --source "$(CGDEV)" > /dev/null && (umount "$(CGDEV)" || exit 1) || true && \
+	findmnt --source "$(PRIZMDEV)" > /dev/null && (umount "$(PRIZMDEV)" || exit 1) || true && \
 		tmp=$$(mktemp --directory) && \
-		(mount "$(CGDEV)" "$$tmp" || (rmdir "$$tmp"; exit 1)) && \
-		(rm "$$tmp/$(OUTPUT_NAME).g3a" || (umount "$(CGDEV)"; exit 1)) && \
-		umount "$(CGDEV)"; \
+		(mount "$(PRIZMDEV)" "$$tmp" || (rmdir "$$tmp"; exit 1)) && \
+		(rm "$$tmp/$(OUTPUT_NAME).g3a" || (umount "$(PRIZMDEV)"; exit 1)) && \
+		umount "$(PRIZMDEV)"; \
 		rmdir "$$tmp"
 
 clean:
