@@ -1,7 +1,7 @@
 /// @file main.c
 /// @author Natalie Wiggins (islifepeachy@outlook.com)
 /// @brief Entry point to Prizmatron: 2084, a multidirectional shooter for the
-/// Casio Prizm series of calculators.
+/// Casio Prizm.
 /// @version 0.1
 /// @date 2022-08-19
 ///
