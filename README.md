@@ -156,7 +156,7 @@ make clean
 ## Code structure
 
 * Written in C
-* Built with Makefile
+* Built with `make`
 * Source code is located in `src/`
 * Indented with hard tabs of 8 characters in width
 * Lines are no longer than 80 characters, unless readability is affected
