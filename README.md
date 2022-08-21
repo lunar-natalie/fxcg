@@ -42,8 +42,7 @@ angle brackets
 
 ## Usage
 
-After installing the add-in, the program should appear in the calculator's Main
-Menu.
+After installing the add-in, start 'Prizmatron' from the calculator's Main Menu.
 
 ## Building
 
@@ -89,9 +88,7 @@ make
 ### Setup
 
 * Connect the calculator to your computer via USB
-* Go to the 'Link' program if it hasn't automatically started
-    * Select the Connection Mode 'USB Flash'
-    * Select 'RECV'
+* Select the Connection Mode 'USB Flash'
 * Note the path to the calculator's flash storage partition on your computer in
   `/dev/`
 * Add the following to `.env.mk`:
