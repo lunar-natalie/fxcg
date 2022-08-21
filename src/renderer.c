@@ -19,7 +19,6 @@
 /// along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 #include "renderer.h"
-#include "scanline_dma.h"
 
 #include <fxcg/display.h>
 
@@ -31,7 +30,7 @@ void render(void)
 	EnableStatusArea(3);
 
 	// Fill outer frame (inaccessible via VRAM) with the background.
-	draw_frame_reimpl(COLOR_BLACK);
+	DrawFrame(COLOR_BLACK);
 
 	// Get VRAM address to start drawing to.
 	vram = GetVRAMAddress();

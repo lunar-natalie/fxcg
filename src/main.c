@@ -25,10 +25,7 @@
 
 int main(void)
 {
-	// TODO(Natalie): Fix:
-	// * Requires input before outer frame is redrawn
-	// * Re-renders inner border after every input
-	// * Outer frame becomes corrupted after returning from system standby
+	// TODO(Natalie): Fix: Requires input before outer frame is drawn.
 
 	int key;
 	while (1) {
