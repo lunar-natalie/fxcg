@@ -1,6 +1,6 @@
 # Prizmatron: 2084
 
-A multidirectional shooter for the Casio FX-CG50 calculator.
+A multidirectional shooter for the Casio Prism (FX-CG) series of calculators.
 
 ## Table of contents
 
