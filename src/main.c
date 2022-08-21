@@ -25,6 +25,11 @@
 
 int main(void)
 {
+	// TODO(Natalie): Fix:
+	// * Requires input before status bar is disabled and outer frame is redrawn
+	// * Renders inner border after every input
+	// * Outer frame becomes corrupted after returning from system standby
+
 	int key;
 	while (1) {
 		render();
