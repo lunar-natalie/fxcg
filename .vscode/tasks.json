@@ -40,5 +40,14 @@
             ],
             "problemMatcher": []
         },
+        {
+            "label": "Clean build environment",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": []
+        }
     ]
 }

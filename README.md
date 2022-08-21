@@ -25,6 +25,10 @@ A multidirectional shooter for the Casio FX-CG50 calculator.
         * [Uninstall](#uninstall)
             * [Standalone](#standalone-3)
             * [VS Code](#vs-code-3)
+    * [Other build commands](#other-build-commands)
+        * [Clean](#clean)
+            * [Standalone](#standalone-4)
+            * [VS Code](#vs-code-4)
     * [Code structure](#code-structure)
     * [Version control](#version-control)
     * [License](#license)
@@ -137,6 +141,20 @@ sudo make uninstall
 #### VS Code
 
 * Run Task `Uninstall add-in`
+
+## Other build commands
+
+### Clean
+
+#### Standalone
+
+```Shell
+make clean
+```
+
+#### VS Code
+
+* Run Task `Clean build environment`
 
 ## Code structure
 
