@@ -22,7 +22,7 @@ include $(FXCGSDK)/toolchain/prizm_rules
 # Build configuration
 # ==============================================================================
 
-OUTPUT_NAME	:= prizmatron
+OUTPUT_NAME	:= Prizmatron
 BUILD_DIR	:= build
 SOURCE_DIRS	:= src
 DATA_DIRS	:= data

@@ -1,9 +1,8 @@
-/// @file main.c
+/// @file renderer.c
 /// @author Natalie Wiggins (islifepeachy@outlook.com)
-/// @brief Entry point to Prizmatron: 2084, a multidirectional shooter for the
-/// Casio FX-CG50 calculator.
+/// @brief Renders display contents.
 /// @version 0.1
-/// @date 2022-08-19
+/// @date 2022-08-21
 ///
 /// @copyright Copyright (c) 2022 Natalie Wiggins.
 /// This program is free software: you can redistribute it and/or modify
@@ -20,19 +19,36 @@
 /// along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 #include "renderer.h"
+#include "scanline_dma.h"
 
-#include <fxcg/keyboard.h>
+#include <fxcg/display.h>
 
-int main(void)
+static color_t *vram;
+
+void render(void)
 {
-	int key;
-	while (1) {
-		render();
+	// Disable status area.
+	EnableStatusArea(3);
 
-		// Wait for input and write VRAM contents to the display.
-		// Returns to the Main Menu if MENU is pressed.
-		GetKey(&key);
+	// Fill outer frame (inaccessible via VRAM) with the background.
+	draw_frame_reimpl(COLOR_BLACK);
+
+	// Get VRAM address to start drawing to.
+	vram = GetVRAMAddress();
+
+	// Draw top border.
+	for (color_t x = 0; x < LCD_WIDTH_PX; ++x)
+		*vram++ = COLOR_MAGENTA;
+
+	// Draw edge borders and background.
+	for (color_t y = 1; y < LCD_HEIGHT_PX - 1; ++y) {
+		*vram++ = COLOR_MAGENTA;
+		for (color_t x = 1; x < LCD_WIDTH_PX - 1; ++x)
+			*vram++ = COLOR_BLACK;
+		*vram++ = COLOR_MAGENTA;
 	}
 
-	return 0;
+	// Draw bottom border.
+	for (color_t x = 0; x < LCD_WIDTH_PX; ++x)
+		*vram++ = COLOR_MAGENTA;
 }

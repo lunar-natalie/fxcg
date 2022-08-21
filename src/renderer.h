@@ -1,9 +1,8 @@
-/// @file main.c
+/// @file renderer.h
 /// @author Natalie Wiggins (islifepeachy@outlook.com)
-/// @brief Entry point to Prizmatron: 2084, a multidirectional shooter for the
-/// Casio FX-CG50 calculator.
+/// @brief Renders display contents.
 /// @version 0.1
-/// @date 2022-08-19
+/// @date 2022-08-21
 ///
 /// @copyright Copyright (c) 2022 Natalie Wiggins.
 /// This program is free software: you can redistribute it and/or modify
@@ -19,20 +18,8 @@
 /// You should have received a copy of the GNU General Public License
 /// along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-#include "renderer.h"
+#pragma once
 
-#include <fxcg/keyboard.h>
-
-int main(void)
-{
-	int key;
-	while (1) {
-		render();
-
-		// Wait for input and write VRAM contents to the display.
-		// Returns to the Main Menu if MENU is pressed.
-		GetKey(&key);
-	}
-
-	return 0;
-}
+/// @brief Draws frame contents via DMA and writes inner display contents to
+/// VRAM.
+void render(void);

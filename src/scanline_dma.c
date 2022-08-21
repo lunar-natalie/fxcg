@@ -56,7 +56,7 @@
 
 // Line buffer in on-CPU 'Y' Memory, divided into two 4KiB pages. Appears not to
 // be used by the OS.
-static color_t* scanlines[2] = {
+static color_t *scanlines[2] = {
 	(color_t *) 0xE5007000,
 	(color_t *) 0xE5017000};
 
@@ -79,7 +79,7 @@ static inline void dma_wait(void)
 	*DMA0_DMAOR = 0;
 }
 
-/// @brief Draws to the display without blocking execution.
+/// @brief Draws to the display (non-blocking).
 /// @param src Video data.
 /// @param size Size of video data.
 static inline void dma_draw(void *src, unsigned int size)
@@ -120,8 +120,7 @@ void flush_scan_buffer(unsigned int start_x, unsigned int end_x,
 
 void draw_frame_reimpl(color_t color)
 {
-	memset(scanlines[0], 0, 4096);
-	memset(scanlines[1], 0, 4096);
+	memset(scanlines[0], color, 8192);
 
 	// Top.
 	flush_scan_buffer(0,
