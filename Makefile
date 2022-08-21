@@ -99,7 +99,7 @@ export LIBPATHS	:= $(foreach dir,$(LIB_DIRS),-L$(dir)/lib) \
 ### Targets
 ### ============================================================================
 
-.PHONY: all uninstall clean
+.PHONY: all install_watch uninstall clean
 
 all: $(BUILD_DIR)
 	@make --no-print-directory -C $(BUILD_DIR) -f $(CURDIR)/Makefile
@@ -126,6 +126,19 @@ endif
 		(cp "$(OUTPUT).g3a" "$$tmp" || (umount "$(CGDEV)"; exit 1)) && \
 		umount "$(CGDEV)"; \
 		rmdir "$$tmp"
+
+install_watch:
+	@sum0=""; \
+		while [ true ]; \
+		do \
+			sum1="$$(md5sum "$(OUTPUT).g3a")"; \
+			if [ "$$sum0" != "$$sum1" ]; \
+			then \
+				make install; \
+			fi; \
+			sum0="$$sum1"; \
+			sleep 1; \
+		done;
 
 uninstall:
 ifeq ($(strip $(CGDEV)),)

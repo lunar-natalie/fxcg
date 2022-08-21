@@ -19,9 +19,12 @@ A multidirectional shooter for the Casio FX-CG50 calculator.
         * [Install](#install)
             * [Standalone](#standalone-1)
             * [VS Code](#vs-code-1)
-        * [Uninstall](#uninstall)
+        * [Install and watch for package changes](#install-and-watch-for-package-changes)
             * [Standalone](#standalone-2)
             * [VS Code](#vs-code-2)
+        * [Uninstall](#uninstall)
+            * [Standalone](#standalone-3)
+            * [VS Code](#vs-code-3)
     * [Code structure](#code-structure)
     * [Version control](#version-control)
     * [License](#license)
@@ -73,6 +76,7 @@ make
 
 ### Additional requirements
 
+* `coreutils`
 * `findmnt`
 * `mount`
 * `sudo`
@@ -108,7 +112,19 @@ sudo make install
 
 #### VS Code
 
-* Run Task (`Install add-in`)
+* Run Task `Install add-in`
+
+### Install and watch for package changes
+
+#### Standalone
+
+```Shell
+sudo make install_watch
+```
+
+#### VS Code
+
+* Run Task `Watch: Install add-in`
 
 ### Uninstall
 
@@ -120,7 +136,7 @@ sudo make uninstall
 
 #### VS Code
 
-* Run Task (`Uninstall add-in`)
+* Run Task `Uninstall add-in`
 
 ## Code structure
 

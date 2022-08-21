@@ -29,6 +29,16 @@
                 "uninstall"
             ],
             "problemMatcher": []
-        }
+        },
+        {
+            "label": "Watch: Install add-in",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "make",
+                "install_watch"
+            ],
+            "problemMatcher": []
+        },
     ]
 }
