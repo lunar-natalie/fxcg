@@ -2,15 +2,17 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.vcFormat.indent.preserveComments": true,
+    "C_Cpp.vcFormat.newLine.beforeElse": false,
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "newLine",
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
-    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "newLine",
-    "C_Cpp.vcFormat.newLine.scopeBracesOnSeparateLines": true,
-    "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+    "C_Cpp.vcFormat.newLine.scopeBracesOnSeparateLines": false,
     "C_Cpp.vcFormat.space.afterCastCloseParenthesis": true,
     "C_Cpp.vcFormat.space.pointerReferenceAlignment": "right",
+    "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
     "doxdocgen.c.triggerSequence": "///",
     "doxdocgen.c.commentPrefix": "/// ",
     "doxdocgen.c.firstLine": "",
@@ -58,6 +60,8 @@
         "system.h": "c",
         "string.h": "c",
         "renderer.h": "c",
-        "scanline_dma.h": "c"
+        "scanline_dma.h": "c",
+        "calctype.h": "c",
+        "arial_small.h": "c"
     }
 }
