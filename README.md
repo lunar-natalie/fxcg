@@ -49,6 +49,7 @@ After installing the add-in, start 'Prizmatron' from the calculator's Main Menu.
 
 ### Requirements
 
+* [`calctype`](https://github.com/lunar-natalie/calctype)
 * [`libfxcg`](https://github.com/lunar-natalie/libfxcg)
 * [`mkg3a`](https://github.com/tari/mkg3a)
 * `make`
@@ -61,7 +62,11 @@ After installing the add-in, start 'Prizmatron' from the calculator's Main Menu.
 
     ```Makefile
     FXCGSDK=<PATH_TO_SDK>
+    SYSTEM_PREFIX=<PATH>
     ```
+
+* Ensure `calctype` is installed to the specified `SYSTEM_PREFIX`. Common
+  prefixes include `/usr` and `/usr/local`
 
 ### Standalone
 

@@ -5,6 +5,7 @@
 -include .env.mk
 
 export FXCGSDK
+export PREFIX
 export PRIZMDEV
 
 ifeq ($(strip $(FXCGSDK)),)
@@ -24,7 +25,7 @@ include $(FXCGSDK)/toolchain/prizm_rules
 
 OUTPUT_NAME	:= Prizmatron
 BUILD_DIR	:= build
-SOURCE_DIRS	:= src
+SOURCE_DIRS	:= src src/fonts
 DATA_DIRS	:= data
 INCLUDE_DIRS	:=
 
@@ -46,8 +47,8 @@ LDFLAGS		= $(MACHDEP) -T$(FXCGSDK)/toolchain/prizm.x -Wl,-static \
 			-Wl,-gc-sections -flto
 
 # Libraries
-LIBS		:= -lc -lfxcg -lgcc
-LIB_DIRS	:=
+LIBS		:= -lc -lfxcg -lcalctype -lgcc
+LIB_DIRS	:= $(SYSTEM_PREFIX)
 
 # ==============================================================================
 # Output
@@ -99,7 +100,7 @@ export LIBPATHS	:= $(foreach dir,$(LIB_DIRS),-L$(dir)/lib) \
 ### Targets
 ### ============================================================================
 
-.PHONY: all install_watch uninstall clean
+.PHONY: all install install_watch uninstall clean
 
 all: $(BUILD_DIR)
 	@make --no-print-directory -C $(BUILD_DIR) -f $(CURDIR)/Makefile
@@ -107,7 +108,7 @@ all: $(BUILD_DIR)
 $(BUILD_DIR):
 	@mkdir $@
 
-install: $(OUTPUT).g3a
+install:
 ifeq ($(strip $(PRIZMDEV)),)
 $(error PRIZMDEV is not set in your environment. \
 	Run `export PRIZMDEV=<PATH_TO_DEVICE>` or add `PRIZMDEV=<PATH_TO_DEVICE>` to '.env.mk')

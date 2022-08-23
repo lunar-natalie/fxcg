@@ -18,8 +18,10 @@
 /// You should have received a copy of the GNU General Public License
 /// along with this program. If not, see <https://www.gnu.org/licenses/>.
 
+#include "fonts/arial_small.h"
 #include "renderer.h"
 
+#include <calctype/calctype.h>
 #include <fxcg/display.h>
 
 static color_t *vram;
@@ -50,4 +52,7 @@ void render(void)
 	// Draw bottom border.
 	for (color_t x = 0; x < LCD_WIDTH_PX; ++x)
 		*vram++ = COLOR_MAGENTA;
+
+	// Draw text.
+	calctype_draw(&arial_small, "Hello, world!", 3, 3, COLOR_WHITE, 0, 0);
 }
